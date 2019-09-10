@@ -48,9 +48,9 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
         cout << "Stereo" << endl;
     else if(mSensor==RGBD)
         cout << "RGB-D" << endl;
-
-    //Check settings file
+        
     cv::FileStorage fsSettings(strSettingsFile.c_str(), cv::FileStorage::READ);
+
     if(!fsSettings.isOpened())
     {
        cerr << "Failed to open settings file at: " << strSettingsFile << endl;

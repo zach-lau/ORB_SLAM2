@@ -24,7 +24,7 @@ elseif(COMPILER_SUPPORTS_CXX0X)
    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
    add_definitions(-DCOMPILEDWITHC0X)
    message(STATUS "Using flag -std=c++0x.")
-else()
+else()  
    message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
@@ -55,6 +55,7 @@ ${Pangolin_LIBRARIES}
 ${PROJECT_SOURCE_DIR}/../../../Thirdparty/DBoW2/lib/libDBoW2.so
 ${PROJECT_SOURCE_DIR}/../../../Thirdparty/g2o/lib/libg2o.so
 ${PROJECT_SOURCE_DIR}/../../../lib/libORB_SLAM2.so
+-lboost_system
 )
 
 # Node for monocular camera
@@ -94,4 +95,3 @@ src/ros_rgbd.cc
 target_link_libraries(RGBD
 ${LIBS}
 )
-

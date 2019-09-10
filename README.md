@@ -1,3 +1,7 @@
+Forked from anliec fork of ORB_SLAM2. OpenCV version downgraded to 3.0
+
+---
+
 Fork from the [original code](https://github.com/raulmur/ORB_SLAM2) with fix to compile on newer environment.
  
  - support Opencv 4.0 pre (compatibility with 2.0/3.0 may be brocken)
